@@ -13,10 +13,10 @@ cron.schedule('*/10 * * * *', async () => {
   console.log('Running cron job every 10 minutes');
   
   try {
-    const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1');
-    console.log('API hit successfully:', response.data);
+    const response = await axios.get('https://express-server-5n5i.onrender.com');
+    console.log('Ping successful:', response.data);
   } catch (error) {
-    console.error('Error hitting the API:', error.message);
+    console.error('Error pinging the server:', error.message);
   }
 });
 
